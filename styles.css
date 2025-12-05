@@ -134,7 +134,8 @@ body {
 
 /* --- KHU VỰC GIỎ HÀNG --- */
 #cart-section {
-    position: absolute; 
+    position: fixed;
+    bottom: 10px;
     right: 20px;
     width: 250px; 
     background: white;
@@ -180,4 +181,5 @@ body {
 }
 #cart-items .cart-item button:hover {
     opacity: 0.8;
+
 }
