@@ -54,7 +54,7 @@ function render() {
       <div class="product-card">
         <img src="${p.img}" class="product-image">
         <div class="product-name">${p.name}</div>
-        <div class="product-price">${p.price.toLocaleString('vi-VN')} đ/Kg</div>
+        <div class="product-price">${p.price.toLocaleString('vi-VN')} đ/Giỏ</div>
         <div class="btn-group">
           <button class="btn btn-view" onclick="openModal(${p.id})">Xem thêm</button>
           <button class="btn btn-add" onclick="quickAdd(${p.id})">Thêm vào giỏ</button>
@@ -229,4 +229,5 @@ function checkout() {
 
 // Bắt đầu: Tải giỏ hàng trước, sau đó hiển thị sản phẩm
 loadCart(); 
+
 render();
