@@ -2,10 +2,10 @@
 
 // Dữ liệu sản phẩm
 const products = [
-  { id: 1, name: "Giỏ hoa quả cao cấp 1", price: 853000, img: "GioHoaQua/CC1.jpg", desc: "Cherry đỏ Mỹ được ưa chuộng nhờ vỏ đỏ bóng đẹp, thịt chắc giòn và vị ngọt đậm đặc trưng. Đây là loại trái cây cao cấp, thích hợp để thưởng thức hằng ngày hoặc làm quà biếu." },
-  { id: 2, name: "Giỏ hoa quả cao cấp 2", price: 673000, img: "GioHoaQua/CC2.jpg", desc: "Quả việt quất nổi bật với màu xanh tím đặc trưng, vị ngọt nhẹ xen chút chua thanh và hàm lượng dinh dưỡng cao. Giàu chất chống oxy hóa, vitamin và chất xơ."},
-  { id: 3, name: "Giỏ hoa quả cao cấp 3", price: 898000, img: "GioHoaQua/CC3.jpg", desc: "Nho mẫu đơn Hàn Quốc gây ấn tượng với chùm lớn, quả to tròn và lớp vỏ tím đậm đẹp mắt. Luôn đạt chất lượng đồng đều, thích hợp làm quà biếu hoặc thưởng thức hằng ngày."},
-  { id: 4, name: "Giỏ hoa quả cao cấp 4", price: 500000, img: "GioHoaQua/CC4.jpg", desc: "Lựu Peru nổi tiếng với hạt đỏ hồng ngọc đẹp mắt, vị ngọt thanh xen chút chua nhẹ và độ giòn đặc trưng. Được ưa chuộng nhờ hương vị thơm ngon và giá trị dinh dưỡng vượt trội."},];
+  { id: 1, name: "Giỏ hoa quả cao cấp 1", price: 853000, img: "GioHoaQua/CC1.jpg", desc: "Giỏ hoa quả cao cấp là sự kết hợp tinh tế giữa những loại trái cây tươi ngon, chất lượng nhất, được tuyển chọn kỹ lưỡng và sắp xếp đẹp mắt. Đây là lựa chọn lý tưởng cho các dịp biếu tặng, lễ Tết, sự kiện hay gửi lời chúc sức khỏe với người thân hoặc đối tác."},
+  { id: 2, name: "Giỏ hoa quả cao cấp 2", price: 673000, img: "GioHoaQua/CC2.jpg", desc: "Giỏ hoa quả cao cấp là sự kết hợp tinh tế giữa những loại trái cây tươi ngon, chất lượng nhất, được tuyển chọn kỹ lưỡng và sắp xếp đẹp mắt. Đây là lựa chọn lý tưởng cho các dịp biếu tặng, lễ Tết, sự kiện hay gửi lời chúc sức khỏe với người thân hoặc đối tác."},
+  { id: 3, name: "Giỏ hoa quả cao cấp 3", price: 898000, img: "GioHoaQua/CC3.jpg", desc: "Giỏ hoa quả cao cấp là sự kết hợp tinh tế giữa những loại trái cây tươi ngon, chất lượng nhất, được tuyển chọn kỹ lưỡng và sắp xếp đẹp mắt. Đây là lựa chọn lý tưởng cho các dịp biếu tặng, lễ Tết, sự kiện hay gửi lời chúc sức khỏe với người thân hoặc đối tác."},
+  { id: 4, name: "Giỏ hoa quả cao cấp 4", price: 500000, img: "GioHoaQua/CC4.jpg", desc: "Giỏ hoa quả cao cấp là sự kết hợp tinh tế giữa những loại trái cây tươi ngon, chất lượng nhất, được tuyển chọn kỹ lưỡng và sắp xếp đẹp mắt. Đây là lựa chọn lý tưởng cho các dịp biếu tặng, lễ Tết, sự kiện hay gửi lời chúc sức khỏe với người thân hoặc đối tác."},];
 
 let cart = [];
 let currentProductId = null;
@@ -54,7 +54,7 @@ function render() {
       <div class="product-card">
         <img src="${p.img}" class="product-image">
         <div class="product-name">${p.name}</div>
-        <div class="product-price">${p.price.toLocaleString('vi-VN')} đ/Giỏ</div>
+        <div class="product-price">${p.price.toLocaleString('vi-VN')} đ/Kg</div>
         <div class="btn-group">
           <button class="btn btn-view" onclick="openModal(${p.id})">Xem thêm</button>
           <button class="btn btn-add" onclick="quickAdd(${p.id})">Thêm vào giỏ</button>
@@ -229,5 +229,4 @@ function checkout() {
 
 // Bắt đầu: Tải giỏ hàng trước, sau đó hiển thị sản phẩm
 loadCart(); 
-
 render();
